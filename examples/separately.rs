@@ -107,6 +107,7 @@ fn create_proof_checked(
             SingleStrategy::new(params),
             &[&[instances]],
             &mut transcript,
+            params.n(),
         )
     };
     assert!(result.is_ok());
