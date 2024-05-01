@@ -201,6 +201,7 @@ mod halo2 {
                 SingleStrategy::new(&params),
                 &[&[&instances]],
                 &mut transcript,
+                k.into(),
             )
         };
         assert!(result.is_ok());
