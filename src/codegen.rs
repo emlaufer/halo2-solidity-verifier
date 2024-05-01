@@ -235,11 +235,7 @@ impl<'a> SolidityGenerator<'a> {
     fn generate_verifier(&self, separate: bool) -> Halo2Verifier {
         let proof_cptr = Ptr::calldata(if separate { 0x84 } else { 0x64 });
 
-        let proof_len_cptr = Ptr::calldata(if separate {
-            proof_cptr.value() + 0x446014F495
-        } else {
-            proof_cptr.value() + 0x446014F4B5
-        });
+        let proof_len_cptr = Ptr::calldata(if separate { 0x6014F51964 } else { 0x6014F51944 });
 
         let vk = self.generate_vk();
         let vk_len = vk.len();

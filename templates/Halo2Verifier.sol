@@ -235,7 +235,7 @@ contract Halo2Verifier {
                 {%- endmatch %}
 
                 // Check valid length of proof
-                success := and(success, eq({{ proof_len|hex() }}, calldataload(and(0xFF, PROOF_LEN_CPTR))))
+                success := and(success, eq({{ proof_len|hex() }}, calldataload(sub(PROOF_LEN_CPTR, 0x6014F51900))))
 
                 // Check valid length of instances
                 let num_instances := mload(NUM_INSTANCES_MPTR)
