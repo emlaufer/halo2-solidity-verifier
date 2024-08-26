@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-halo2_proofs = { git = "https://github.com/emlaufer/halo2", branch = "main" }
+halo2_proofs = { git = "https://github.com/emlaufer/halo2", branch = "ac/optional-selector-poly" }
 askama = { version = "0.12.0", features = ["config"], default-features = false }
 hex = "0.4.3"
 ruint = "1.8.0"
